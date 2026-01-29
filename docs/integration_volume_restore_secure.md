@@ -1,0 +1,47 @@
+---
+title: "Step 6. Specify Secure Restore Settings"
+product: "agentforwindows"
+doc_type: "userguide"
+source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_volume_restore_secure.html"
+last_updated: "1/9/2026"
+product_version: "13.0.1.1009"
+---
+
+# Step 6. Specify Secure Restore Settings
+
+
+At the Secure Restore step of the wizard, you can instruct Veeam Backup & Replication to perform secure restore. To learn more about secure restore, see the [Secure Restore](https://helpcenter.veeam.com/docs/vbr/userguide/av_scan_about.html?ver=13) section in the Veeam Backup & Replication User Guide.
+
+To enable secure restore, select Scan the restored disk for malware prior to performing the recovery.
+
+If you want to scan the entire backup file even if malware was already found, select Scan the entire image.
+
+To specify secure restore settings:
+
+1. In the Content scan section, specify the following:
+
+1. If you want to scan the restored volume with a scan engine or antivirus software, select the method you want to use for data scan:
+
+* Select the Scan restore points with Veeam Threat Hunter option to use Veeam Threat Hunter.
+
+This option is available if you configured Veeam Threat Hunter as the detection engine in the malware detection settings. To learn more, see the [Signature Detection](https://helpcenter.veeam.com/docs/vbr/userguide/malware_detection_signature_detection.html?ver=13) section in the Veeam Backup & Replication User Guide.
+
+* Select the Scan restore points with your antivirus software prior to performing a recovery option to use third-party antivirus software.
+
+This option is available if you configured a third-party antivirus as the detection engine in the malware detection settings. To learn more, see the [Signature Detection](https://helpcenter.veeam.com/docs/vbr/userguide/malware_detection_signature_detection.html?ver=13) section in the Veeam Backup & Replication User Guide.
+
+|  |
+| --- |
+| Tip |
+| Click Change to open the Malware Detection Settings window where you can change the detection engine to Veeam Threat Hunter. |
+
+1. If you want to scan the restored volume with a YARA rule, select the Scan backup content with the following YARA rule check box and select a YARA rule from the drop-down list. By default, the paths to the YARA rules are as follows:
+
+* /var/lib/veeam/yara\_rules directory — if you use Veeam Backup & Replication on Linux.
+* C:\Program Files\Veeam\Backup and Replication\Backup\YaraRules — if you use Veeam Backup & Replication on Microsoft Windows.
+
+1. In the Scan options section, select the Continue scanning all remaining files after the first occurence check box if you want to continue volume scan after the first malware threat is found. For information on how to view results of the antivirus scan, see the [Secure Restore](https://helpcenter.veeam.com/docs/vbr/userguide/av_scan_about.html?ver=13) section in the Veeam Backup & Replication User Guide.
+
+![Step 6. Specify Secure Restore Settings](images/agent_volume_restore_secure.webp "Specify Secure Restore Settings")
+
+
