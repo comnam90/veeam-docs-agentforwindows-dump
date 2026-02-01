@@ -3,7 +3,7 @@ title: "Synthetic Full Backup"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/synthetic_full_backup.html"
-last_updated: "10/7/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 
@@ -40,14 +40,6 @@ Retention Policy for Synthetic Full Backups
 To be able to restore data from a Veeam Agent backup, you need to have a full backup file and a chain of subsequent incremental backup files on the disk. If you delete a full backup file, the whole chain of incremental backup files will become useless. In a similar manner, if you delete any incremental backup file before the point to which you want to roll back, you will not be able to restore data (since later incremental backup files depend on earlier incremental backup files).
 
 For this reason, if you set up the backup job to create synthetic full backups, in some days there will be more restore points on the disk than specified by retention policy settings. Veeam Agent for Microsoft Windows will remove the full backup chain only after the last incremental backup file in the chain becomes outdated.
-
-For example, the retention policy is set to 3 restore points. A full backup file is created on Sunday, incremental backup files are created Monday through Saturday, and synthetic full backup is scheduled on Thursday. Although the retention policy is already breached on Wednesday, the full backup is not deleted. Without the full backup, backup chain is useless, leaving you without any restore point at all. Veeam Agent for Microsoft Windows will wait for the next full backup file and 2 incremental backup files to be created, and only then will delete the whole previous chain, which will happen on Saturday.
-
-![Synthetic Full Backup](images/synthetic_full_retention.webp "Removal of 4 Obsolete Restore Points")
-
-Keep in mind that if the backup job is set up to create synthetic full backups, Veeam Agent for Microsoft Windows will never transform the backup chain. Instead, Veeam Agent for Microsoft Windows will always wait for the next full backup file and the necessary number of incremental backup files to be created, and only then will delete the whole previous chain. In the example above, Veeam Agent for Microsoft Windows will delete the previous chain every Saturday. As a result, although the retention policy is set to 3 restore points, the actual number of backup files on the disk will be greater most of the time.
-
-![Synthetic Full Backup](images/synthetic_full_retention_remove.webp "Removal of 7 Obsolete Restore Points")
 
 Related Tasks
 
