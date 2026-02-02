@@ -3,7 +3,7 @@ title: "Closing Veeam Backup Browser"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/files_restore_close.html"
-last_updated: "2/4/2025"
+last_updated: "11/17/2025"
 product_version: "13.0.1.1009"
 ---
 

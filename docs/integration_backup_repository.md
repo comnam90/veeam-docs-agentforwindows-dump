@@ -3,7 +3,7 @@ title: "Backing Up to Backup Repositories"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_backup_repository.html"
-last_updated: "11/21/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

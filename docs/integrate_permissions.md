@@ -3,7 +3,7 @@ title: "Setting Up User Permissions on Backup Repositories"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integrate_permissions.html"
-last_updated: "11/7/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

@@ -3,7 +3,7 @@ title: "Restoring Files and Folders to Another Veeam Agent Computer"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_file_restore_complete_new.html"
-last_updated: "11/18/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

@@ -3,7 +3,7 @@ title: "Using with Veeam Backup & Replication"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integrate.html"
-last_updated: "12/1/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

@@ -3,7 +3,7 @@ title: "Managing Instance Consumption by Veeam Agents"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/manage_instance_consumption.html"
-last_updated: "11/10/2023"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

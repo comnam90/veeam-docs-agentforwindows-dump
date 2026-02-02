@@ -3,7 +3,7 @@ title: "Enabling and Disabling Veeam Agent Backup Jobs"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_disable.html"
-last_updated: "1/15/2024"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

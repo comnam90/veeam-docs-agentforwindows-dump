@@ -3,7 +3,7 @@ title: "Assigning License to Veeam Agent"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/license_vbr_mode.html"
-last_updated: "12/12/2024"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 
