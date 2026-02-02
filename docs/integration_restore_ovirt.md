@@ -3,7 +3,7 @@ title: "Restoring Veeam Agent Backup to oVirt KVM VM"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_restore_ovirt.html"
-last_updated: "11/10/2025"
+last_updated: "1/30/2026"
 product_version: "13.0.1.1009"
 ---
 

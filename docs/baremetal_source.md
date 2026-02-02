@@ -3,7 +3,7 @@ title: "Step 4. Specify Backup File Location"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/baremetal_source.html"
-last_updated: "2/4/2025"
+last_updated: "11/14/2025"
 product_version: "13.0.1.1009"
 ---
 
