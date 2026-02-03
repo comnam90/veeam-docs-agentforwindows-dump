@@ -3,7 +3,7 @@ title: "Synthetic Full Backup"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/synthetic_full_backup.html"
-last_updated: "1/30/2026"
+last_updated: "2/2/2026"
 product_version: "13.0.1.1009"
 ---
 
@@ -15,34 +15,40 @@ In some situations, running active full backups periodically may not be an optio
 |  |
 | --- |
 | NOTE |
-| Consider the following:   * Synthetic full backup is available only in the Workstation and Server editions of Veeam Agent for Microsoft Windows. * Synthetic full backup is not available for backup jobs targeted at object storage. |
+| Consider the following:   * Synthetic full backup is available only in the Workstation and Server editions of Veeam Agent. * Synthetic full backup is not available for backup jobs targeted at an object storage repository. |
 
-In terms of data, the synthetic full backup is identical to a regular full backup. Synthetic full backup produces a VBK file that contains all data that you have chosen to back up. The difference between active and synthetic full backup lies in the way how backed-up data is retrieved:
+In terms of data, the synthetic full backup is identical to a regular full backup. Synthetic full backup produces a .VBK file that contains all data that you have chosen to back up. The difference between active and synthetic full backup lies in the way how backed-up data is retrieved:
 
-* When you perform active full backup, Veeam Agent for Microsoft Windows reads backed-up data, compresses it and copies it to the target location.
-* When you perform synthetic full backup, Veeam Agent for Microsoft Windows does not retrieve all backed-up data from the Veeam Agent computer. Instead, it creates a new incremental backup and then synthesizes a full backup from data you already have on the target location. Veeam Agent for Microsoft Windows accesses the previous full backup file and a chain of subsequent incremental backup files in the backup chain including a new incremental backup, consolidates data from these files and writes consolidated data into a new full backup file. As a result, the created synthetic full backup file contains the same data as an active full backup.
+* When you perform an active full backup, Veeam Agent reads backed-up data, compresses it and copies it to the target location.
+* When you perform a synthetic full backup, Veeam Agent does not retrieve all backed-up data from the Veeam Agent computer. Instead, it creates a new incremental backup and then synthesizes a full backup from data you already have on the target location. Veeam Agent accesses the previous full backup file and a chain of subsequent incremental backup files in the backup chain including a new incremental backup, consolidates data from these files and writes consolidated data into a new full backup file. As a result, the created synthetic full backup file contains the same data as an active full backup.
 
-The synthetic full backup has a number of advantages:
+Consider the following advantages of synthetic full backup:
 
-* The synthetic full backup does not use network resources: it is created from backup files you already have on the target location.
-* The synthetic full backup produces less load on the production environment: it is synthesized right on the target location.
+* Synthetic full backup does not use network resources: it is created from backup files you already have in the target location.
+* Synthetic full backup produces less load on the production environment: it is synthesized directly in the target location.
 
-Veeam Agent for Microsoft Windows treats synthetic full backups as regular full backups. As well as any other full backup file, the synthetic full backup file resets the backup chain. All subsequent incremental backup files use the synthetic full backup file as a new starting point.
+Veeam Agent treats synthetic full backups as regular full backups. As well as any other full backup file, a synthetic full backup file resets the backup chain. All subsequent incremental backup files use the synthetic full backup file as a new starting point.
 
-A previously used full backup file and its subsequent incremental backup files remain on the disk. After the last incremental backup file created prior to the synthetic full backup becomes outdated, Veeam Agent for Microsoft Windows automatically deletes the previous backup chain. To learn more, see [Retention Policy for Synthetic Full Backups](#retention).
+A previously used full backup file and its subsequent incremental backup files remain on the disk. After the last incremental backup file created prior to the synthetic full backup becomes outdated, Veeam Agent automatically deletes the previous backup chain. To learn more, see [Retention Policy for Synthetic Full Backups](#retention).
 
-To create synthetic full backups, you must enable the Create synthetic full backups periodically option and schedule creation of synthetic full backups in the backup job settings.
+To create synthetic full backups, you must enable the Create synthetic full backups periodically option and schedule synthetic full backups in the backup job settings.
 
 ![Synthetic Full Backup](images/ep_backup_job_settings_backup.webp "Create Synthetic Full Backups Periodically")
 
 Retention Policy for Synthetic Full Backups
 
-To be able to restore data from a Veeam Agent backup, you need to have a full backup file and a chain of subsequent incremental backup files on the disk. If you delete a full backup file, the whole chain of incremental backup files will become useless. In a similar manner, if you delete any incremental backup file before the point to which you want to roll back, you will not be able to restore data (since later incremental backup files depend on earlier incremental backup files).
+To restore data from a Veeam Agent backup, you must have a full backup file and a chain of subsequent incremental backup files on the disk. If you delete the full backup file, the whole chain of incremental backup files becomes useless. Likewise, if you delete any incremental backup file that precedes the point to which you want to roll back, you will also not be able to restore data because any incremental backup file also depends on the preceding incremental backup files in the backup chain.
 
-For this reason, if you set up the backup job to create synthetic full backups, in some days there will be more restore points on the disk than specified by retention policy settings. Veeam Agent for Microsoft Windows will remove the full backup chain only after the last incremental backup file in the chain becomes outdated.
+For this reason, if you schedule synthetic full backups, on some days there will be more restore points on the disk than specified by the retention policy settings.
 
-Related Tasks
+For example, you configure a backup job in the following way:
 
-[Creating Backup Jobs](backup_job_create.md)
+* The backup job starts on Sunday and is scheduled to create one incremental backup file per day, every day.
+* Retention policy is set to 3 days.
+* Weekly synthetic full backups are scheduled on Thursdays.
+
+The first full backup file is created on Sunday, incremental backup files are created daily, and a synthetic full backup is created on Thursday. Although the retention policy is reached on Wednesday, the full backup is not deleted. Without a full backup, the backup chain is useless and leaves you without any restore point at all. Veeam Agent will wait for 2 days to pass after the synthetic full backup, and only after that will it delete the whole previous chain, which will happen on Sunday.
+
+![Synthetic Full Backup](images/retention_policy_example_synth.webp)
 
 
