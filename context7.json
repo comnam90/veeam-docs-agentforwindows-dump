@@ -1,12 +1,4 @@
 {
-  "$schema": "https://context7.com/schema/context7.json",
-  "projectTitle": "Veeam Agent for Microsoft Windows Docs",
-  "description": "Unofficial documentation dump for Veeam Agent for Microsoft Windows. Documentation for Veeam's backup and recovery solution for Windows workstations and servers.",
-  "folders": ["docs"],
-  "excludeFolders": [],
-  "excludeFiles": [],
-  "rules": [
-    "This is unofficial documentation - always verify against official Veeam Help Center",
-    "Product covers Windows endpoint and server backup protection"
-  ]
+  "url": "https://context7.com/comnam90/veeam-docs-agentforwindows-dump",
+  "public_key": "pk_vgr5FzV3CQdIPvTbuNnlU"
 }
