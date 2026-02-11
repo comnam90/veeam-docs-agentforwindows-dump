@@ -3,7 +3,7 @@ title: "Restoring Veeam Agent Backup to Nutanix VM"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_instant_restore_nutanix.html"
-last_updated: "2/3/2026"
+last_updated: "2/11/2026"
 product_version: "13.0.1.1009"
 ---
 

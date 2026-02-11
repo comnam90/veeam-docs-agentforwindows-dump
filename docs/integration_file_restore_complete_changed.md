@@ -3,7 +3,7 @@ title: "Restoring Changed Files and Folders"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_file_restore_complete_changed.html"
-last_updated: "2/3/2026"
+last_updated: "2/11/2026"
 product_version: "13.0.1.1009"
 ---
 

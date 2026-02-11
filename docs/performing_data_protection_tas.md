@@ -3,7 +3,7 @@ title: "Performing Data Protection Tasks"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/performing_data_protection_tas.html"
-last_updated: "2/3/2026"
+last_updated: "2/11/2026"
 product_version: "13.0.1.1009"
 ---
 
