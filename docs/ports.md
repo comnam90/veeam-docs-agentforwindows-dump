@@ -3,44 +3,31 @@ title: "Ports"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html"
-last_updated: "12/23/2025"
+last_updated: "2/11/2026"
 product_version: "13.0.1.1009"
 ---
 
 # Ports
 
 
-|  |
-| --- |
-| NOTE |
-| The following tables describe network ports that must be opened to ensure proper communication of Veeam Agent operating in the standalone mode with other infrastructure components.  To learn about ports required to enable proper work of Veeam Agent for Microsoft Windows managed by Veeam Backup & Replication, see the [Ports](https://helpcenter.veeam.com/docs/vbr/userguide/agents_used_ports.html?ver=13) section in the Veeam Backup & Replication User Guide. |
+The following tables describe network ports that must be opened to ensure proper communication of Veeam Agent operating in the standalone mode with other infrastructure components.
+
+To learn about ports required to enable proper work of Veeam Agent for Microsoft Windows managed by Veeam Backup & Replication, see the [Ports](https://helpcenter.veeam.com/docs/vbr/userguide/agents_used_ports.html?ver=13) section in the Veeam Backup & Replication User Guide.
 
 |  |
 | --- |
 | ![Ports](images/icon_important.webp) IMPORTANT |
 | The list of ports required for computers booted from the Veeam Recovery Media is the same as the list of ports required for Veeam Agent computers. |
 
-The following table describes network ports that Veeam Agent for Microsoft Windows requires to be open on the Veeam Agent computer to operate successfully:
+Communication with Veeam Backup Server
 
-| Protocol | Port | Notes |
-| --- | --- | --- |
-| TCP | 6183, | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service, and between  Veeam Agent components and backup targets. |
-
-The following tables describe network ports that must be opened on the target to ensure proper communication of Veeam Agent for Microsoft Windows with backup infrastructure components:
-
-* [Outgoing Connections](#outgoing)
-* [Incoming Connections](#incoming)
-
-Outgoing Connections
-
-Communication Between Veeam Agent Components
-
-The following table describes network ports that must be opened to enable proper communication between Veeam Agent for Microsoft Windows components.
+The following table describes network ports that must be opened to ensure proper communication between Veeam Agent computers and the Veeam backup server.
 
 | From | To | Protocol | Port | Notes |
 | --- | --- | --- | --- | --- |
-| Veeam Agent computer | Veeam Agent computer | TCP | 6183, 2500 to 3500, 49152 to 65535 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
-| Veeam Update Notification Server (agents.butler.veeam.com) | TCP | 443 | Default port used to download information about available updates from the Veeam Update Notification Server over the Internet. |
+| Veeam Agent computer | Veeam backup server | TCP | 10005 | Default port used by Veeam Agent for Microsoft Windows for communication with the Veeam backup server.  Port used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
+| TCP | 443 | Port used by Veeam Agent to obtain authentication tokens from the Veeam Backup Identity Service. |
+| Veeam backup server | Veeam Agent computer | TCP | 135, | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
 
 Communication with Veeam Backup Repositories
 
@@ -48,9 +35,7 @@ The following table describes network ports that must be opened to ensure proper
 
 | From | To | Protocol | Port | Notes |
 | --- | --- | --- | --- | --- |
-| Veeam Agent computer | Veeam backup server | TCP | 10005 | Default port used by Veeam Agent for Microsoft Windows for communication with the Veeam Backup server.  Port used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
-| TCP | 443 | Port used by Veeam Agent to obtain authentication tokens from Veeam Backup Identity Service. |
-| Veeam backup repository | TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
+| Veeam Agent computer | Veeam backup repository | TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
 | Gateway server | TCP UDP | 137 to 139,  445 | If an SMB (CIFS) share is used as a backup repository and a Microsoft Windows server is selected as a gateway server for this CIFS share, these ports must be opened on the gateway Microsoft Windows server.  Ports 137 to 139 are used by backup infrastructure components to communicate using NetBIOS. |
 | TCP | 49152 to 65535 | Dynamic RPC port range. For more information, see [Microsoft documentation](https://support.microsoft.com/kb/929851/en-us). |
 | TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
@@ -107,12 +92,19 @@ The following table describes network ports that must be opened to ensure proper
 | --- | --- | --- | --- | --- |
 | Veeam Agent computer | DNS server | TCP | 135 | Port used for connection with Microsoft Endpoint Mapper to find available network services. |
 | Active Directory Domain Controller | TCP | 389, 636, 49152 to 65535 | Ports used for communications over LDAP and LDAPS protocols. |
+| Veeam Update Notification Server (agents.butler.veeam.com) | TCP | 443 | Default port used to download information about available updates from the Veeam Update Notification Server over the Internet. |
 
-Incoming Connections
+Communication Between Veeam Agent Components
 
-| From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
-| Veeam Agent computer | Veeam Agent computer | TCP | 6183, 2500 to 3500, 49152 to 65535 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
-| Veeam backup server | TCP | 135, 445, 6160, 6162 2500 to 3300, 3260, 49152 to 65535 | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
+The following table describes network ports that are required for communication between Veeam Agent for Microsoft Windows components.
+
+|  |
+| --- |
+| NOTE |
+| For Veeam Agent to operate successfully, make sure that these ports are available locally and not in use by other processes or applications. |
+
+| Protocol | Port | Notes |
+| --- | --- | --- |
+| TCP | 6183, 2500 to 3500, 49152 to 65535 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
 
 
