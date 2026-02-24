@@ -3,7 +3,7 @@ title: "Step 3. Select Restore Point"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_publish_point.html"
-last_updated: "2/11/2026"
+last_updated: "2/24/2026"
 product_version: "13.0.1.1009"
 ---
 
