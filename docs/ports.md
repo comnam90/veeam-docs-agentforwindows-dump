@@ -3,7 +3,7 @@ title: "Ports"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html"
-last_updated: "2/11/2026"
+last_updated: "2/24/2026"
 product_version: "13.0.1.1009"
 ---
 
@@ -23,8 +23,9 @@ Communication with Veeam Backup Server
 
 The following table describes network ports that must be opened to ensure proper communication between Veeam Agent computers and the Veeam backup server.
 
+Communication with Veeam Backup Server
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | Veeam backup server | TCP | 10005 | Default port used by Veeam Agent for Microsoft Windows for communication with the Veeam backup server.  Port used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
 | TCP | 443 | Port used by Veeam Agent to obtain authentication tokens from the Veeam Backup Identity Service. |
 | Veeam backup server | Veeam Agent computer | TCP | 135, | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
@@ -33,8 +34,9 @@ Communication with Veeam Backup Repositories
 
 The following table describes network ports that must be opened to ensure proper communication with backup repositories added to the Veeam Backup & Replication infrastructure.
 
+Communication with Veeam Backup Repositories
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | Veeam backup repository | TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
 | Gateway server | TCP UDP | 137 to 139,  445 | If an SMB (CIFS) share is used as a backup repository and a Microsoft Windows server is selected as a gateway server for this CIFS share, these ports must be opened on the gateway Microsoft Windows server.  Ports 137 to 139 are used by backup infrastructure components to communicate using NetBIOS. |
 | TCP | 49152 to 65535 | Dynamic RPC port range. For more information, see [Microsoft documentation](https://support.microsoft.com/kb/929851/en-us). |
@@ -44,8 +46,9 @@ Communication with Veeam Cloud Connect Repositories
 
 The following table describes network ports that must be opened to ensure proper communication with Veeam Cloud Connect repositories.
 
+Communication with Veeam Cloud Connect Repositories
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | Cloud gateway | TCP | 6180+ | Port on the cloud gateway used to transport Veeam Agent data to the Veeam Cloud Connect repository. |
 | Certificate revocation lists | TCP | 80 or 443 (most popular) | Veeam Agent computer needs access to CRLs (Certificate Revocation Lists) of the CA (Certification Authority) who issued a certificate to the Veeam Cloud Connect service provider.  Generally, information about CRL locations can be found on the CA website. |
 
@@ -53,8 +56,9 @@ Communication with Object Storage
 
 The following table describes network ports that must be opened to ensure proper communication with object storage if you back up data to object storage directly or to object storage added as a Veeam backup repository with the direct connection mode. For more information about object storage connection modes, see [Connection Types](backup_to_object_storage.md#connect).
 
+Communication with Object Storage
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | Amazon S3 object storage | TCP | 443 | Used to communicate with the Amazon S3 object storage through the following endpoints:   * \*.amazonaws.com (for both Global and Government regions) * \*.amazonaws.com.cn (for China region)   All AWS service endpoints are specified in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). |
 | 80 | Used to verify the certificate status through the following endpoints:   * \*.amazontrust.com * \*.cloudfront.net   Consider that certificate verification endpoints (CRL URLs and OCSP servers) are subject to change. The actual list of addresses can be found in the certificate itself. |
 | Microsoft Azure object storage | TCP | 443 | Used to communicate with the Microsoft Azure object storage through the following endpoints:   * <storage-account>.blob.core.windows.net (for Global region) * <storage-account>.blob.core.chinacloudapi.cn (for China region) * <storage-account>.blob.core.usgovcloudapi.net (for Government region)   Consider that the <storage-account> part of the address must be replaced with your actual storage account URL that can be found in the Azure management portal. |
@@ -68,8 +72,9 @@ Communication with Shared Folder Targets
 
 The following table describes network ports that must be opened to ensure proper communication between Veeam Agent and shared folder targets outside the Veeam Backup & Replication infrastructure.
 
+Communication with Shared Folder Targets
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | Shared folder SMB (CIFS) share | TCP | 139, 445 | Ports used as a transmission channel from the Veeam Agent computer to the target SMB (CIFS) share.  Ports 137-139 are used by backup infrastructure components to communicate using NetBIOS if you use NetBIOS in your infrastructure. |
 | UDP | 137, 138 |
 
@@ -77,8 +82,9 @@ Communication with Mail Servers
 
 The following table describes network ports that must be opened to ensure proper communication with mail servers.
 
+Communication with Mail Servers
+
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | SMTP server | TCP | 25 | Default port used by the SMTP server. |
 | TCP | 587 | Port used by the SMTP server if SSL is enabled. |
 | Gmail REST API (gmail.googleapis.com) | TCP | 443 | Port used for communication with Google Mail services. |
@@ -86,10 +92,11 @@ The following table describes network ports that must be opened to ensure proper
 
 Communication with Other Services
 
-The following table describes network ports that must be opened to ensure proper communication with Microsoft Windows services.
+The following table describes network ports that must be opened to ensure proper communication with other services, such as Microsoft Windows services.
+
+Communication with Other Services
 
 | From | To | Protocol | Port | Notes |
-| --- | --- | --- | --- | --- |
 | Veeam Agent computer | DNS server | TCP | 135 | Port used for connection with Microsoft Endpoint Mapper to find available network services. |
 | Active Directory Domain Controller | TCP | 389, 636, 49152 to 65535 | Ports used for communications over LDAP and LDAPS protocols. |
 | Veeam Update Notification Server (agents.butler.veeam.com) | TCP | 443 | Default port used to download information about available updates from the Veeam Update Notification Server over the Internet. |
@@ -103,8 +110,9 @@ The following table describes network ports that are required for communication 
 | NOTE |
 | For Veeam Agent to operate successfully, make sure that these ports are available locally and not in use by other processes or applications. |
 
+Communication Between Veeam Agent Components
+
 | Protocol | Port | Notes |
-| --- | --- | --- |
 | TCP | 6183, 2500 to 3500, 49152 to 65535 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
 
 
