@@ -3,7 +3,7 @@ title: "Amazon S3 Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/backup_job_object_storage_s3.html"
-last_updated: "11/18/2025"
+last_updated: "2/24/2026"
 product_version: "13.0.1.1009"
 ---
 
@@ -83,7 +83,7 @@ To use the GFS (Grandfather-Father-Son) retention scheme, select the Keep certai
 |  |
 | --- |
 | IMPORTANT |
-| Consider the following:   * If the job retention exceeds the immutability period, the actual retention is counted as the job retention policy + the block generation period. * If the immutability period exceeds the job retention period, the actual retention is counted as the immutability period + the block generation period.   For more information, see [How Immutability Works](backup_immutability_hiw.md). |
+| Consider the following:   * If the job retention period exceeds the immutability period, the actual retention is calculated as the sum of the job retention policy and the block generation period. * If the immutability period exceeds the job retention period, the actual retention is calculated as the sum of the immutability period and the block generation period.   For more information, see [How Immutability Works](backup_immutability_hiw.md). |
 
 * Select For the minimum immutability period only if you want to specify the immutability period explicitly and specify a minimum immutability period in days. By default, Veeam Agent sets the period to 30 days.
 
