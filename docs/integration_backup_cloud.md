@@ -3,7 +3,7 @@ title: "Backing Up to Cloud Repositories"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_backup_cloud.html"
-last_updated: "3/5/2026"
+last_updated: "3/9/2026"
 product_version: "13.0.1.1009"
 ---
 
