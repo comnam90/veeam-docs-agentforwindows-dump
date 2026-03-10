@@ -3,7 +3,7 @@ title: "BitLocker Encrypted Volumes Support"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/bitlocker.html"
-last_updated: "10/11/2024"
+last_updated: "3/9/2026"
 product_version: "13.0.1.1009"
 ---
 
@@ -25,19 +25,13 @@ BitLocker encrypted volumes (both source and target) must be unlocked at the mom
 
 Data Restore
 
-You can restore data from backups stored on BitLocker encrypted volumes and restore data to BitLocker encrypted volumes.
+You can restore data from backups stored on BitLocker encrypted volumes and restore data to BitLocker encrypted volumes:
 
-Veeam Agent for Microsoft Windows restores volumes in their initial state:
+* If you restore a Bitlocker encrypted volume to its original location, the restored volume will be encrypted, except when you resize the volume during the restore process. In this case, the restored volume will be unencrypted. To learn more about volume resize, see [Volume Resize](data_restore_with_volume_resize.md).
+* If you restore an unencrypted volume to a Bitlocker encrypted volume, the restored volume will be unencrypted.
+* File-level restore does not affect the Bitlocker encryption state of the target volume.
 
-* If you restore an encrypted volume to its original location, the restored volume will be encrypted.
-* If you restore an unencrypted volume to an encrypted volume, the restored volume will be unencrypted.
-
-|  |
-| --- |
-| IMPORTANT |
-| If you resize a BitLocker encrypted volume during restore, the restored volume will be unencrypted. To learn more about volume resize, see [Volume Resize](data_restore_with_volume_resize.md). |
-
-BitLocker encrypted volumes must be unlocked at the moment when you perform the restore operation.
+BitLocker encrypted volumes must be unlocked at the moment when you perform the restore operation:
 
 * If the backup file is stored on a locked volume, Veeam Agent for Microsoft Windows will fail to access it, and you will not be able to restore data from it.
 
