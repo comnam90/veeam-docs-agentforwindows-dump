@@ -3,7 +3,7 @@ title: "Removing Veeam Agent Backups"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integraton_remove_backups.html"
-last_updated: "3/5/2026"
+last_updated: "3/9/2026"
 product_version: "13.0.1.1009"
 ---
 
