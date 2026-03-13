@@ -3,8 +3,8 @@ title: "Step 6. Specify Secure Restore Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_volume_restore_secure.html"
-last_updated: "3/9/2026"
-product_version: "13.0.1.1009"
+last_updated: "3/12/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Step 6. Specify Secure Restore Settings
