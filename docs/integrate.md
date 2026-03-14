@@ -3,8 +3,8 @@ title: "Using with Veeam Backup & Replication"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integrate.html"
-last_updated: "3/9/2026"
-product_version: "13.0.1.1009"
+last_updated: "3/12/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Using with Veeam Backup & Replication
@@ -15,7 +15,7 @@ If you have the Veeam backup infrastructure deployed in the production environme
 |  |
 | --- |
 | IMPORTANT |
-| If you plan to use Veeam Agent for Microsoft Windows  13.0.1 with Veeam Backup & Replication, you must install Veeam Backup & Replication 13.0.1. |
+| If you plan to use Veeam Agent for Microsoft Windows  13.0.2 with Veeam Backup & Replication, you must install Veeam Backup & Replication 13.0.1. |
 
 |  |
 | --- |
