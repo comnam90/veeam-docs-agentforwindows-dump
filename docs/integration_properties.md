@@ -3,8 +3,8 @@ title: "Viewing Veeam Agent Backup Properties"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_properties.html"
-last_updated: "3/9/2026"
-product_version: "13.0.1.1009"
+last_updated: "3/12/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Viewing Veeam Agent Backup Properties
