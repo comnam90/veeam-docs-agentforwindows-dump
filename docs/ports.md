@@ -3,8 +3,8 @@ title: "Ports"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html"
-last_updated: "2/24/2026"
-product_version: "13.0.1.1009"
+last_updated: "3/12/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Ports
@@ -37,10 +37,9 @@ The following table describes network ports that must be opened to ensure proper
 Communication with Veeam Backup Repositories
 
 | From | To | Protocol | Port | Notes |
-| Veeam Agent computer | Veeam backup repository | TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
+| Veeam Agent computer | Veeam backup repository | TCP | 6162, 2500 to 3300 | Default port used by Veeam Data Mover Service.  Note: The port range 2500 to 3300 is optional. Only if port 6162 is unavailable, Veeam Plug-In uses the port range 2500 to 3300 for failover. |
 | Gateway server | TCP UDP | 137 to 139,  445 | If an SMB (CIFS) share is used as a backup repository and a Microsoft Windows server is selected as a gateway server for this CIFS share, these ports must be opened on the gateway Microsoft Windows server.  Ports 137 to 139 are used by backup infrastructure components to communicate using NetBIOS. |
-| TCP | 49152 to 65535 | Dynamic RPC port range. For more information, see [Microsoft documentation](https://support.microsoft.com/kb/929851/en-us). |
-| TCP | 6162, 2500 to 3300 | Default range of ports used as data transmission channels. |
+| TCP | 6162, 2500 to 3300 | Default port used by Veeam Data Mover Service.  Note: The port range 2500 to 3300 is optional. Only if port 6162 is unavailable, Veeam Plug-In uses the port range 2500 to 3300 for failover. |
 
 Communication with Veeam Cloud Connect Repositories
 
@@ -97,8 +96,7 @@ The following table describes network ports that must be opened to ensure proper
 Communication with Other Services
 
 | From | To | Protocol | Port | Notes |
-| Veeam Agent computer | DNS server | TCP | 135 | Port used for connection with Microsoft Endpoint Mapper to find available network services. |
-| Active Directory Domain Controller | TCP | 389, 636, 49152 to 65535 | Ports used for communications over LDAP and LDAPS protocols. |
+| Veeam Agent computer | Active Directory Domain Controller | TCP | 135, 389, 636, 49152 to 65535 | Port 135 is used for connection with Microsoft Endpoint Mapper to find available network services. Ports 389, 636, 49152 to 65535 are used for communication over LDAP and LDAPS protocols. |
 | Veeam Update Notification Server (agents.butler.veeam.com) | TCP | 443 | Default port used to download information about available updates from the Veeam Update Notification Server over the Internet. |
 
 Communication Between Veeam Agent Components
