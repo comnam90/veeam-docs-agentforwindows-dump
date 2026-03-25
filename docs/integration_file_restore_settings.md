@@ -3,7 +3,7 @@ title: "Step 5. Verify Restore Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_file_restore_settings.html"
-last_updated: "3/12/2026"
+last_updated: "3/25/2026"
 product_version: "13.0.2.1102"
 ---
 
