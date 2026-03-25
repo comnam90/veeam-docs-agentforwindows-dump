@@ -3,8 +3,8 @@ title: "Step 5. Select Network Storage Type"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/baremetal_remote.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "3/25/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Step 5. Select Network Storage Type
@@ -15,6 +15,12 @@ The Network Storage step of the wizard is available if you have selected to rest
 Select where the backup file resides:
 
 * Object storage — select this option if the backup file resides in object storage. With this option selected, you will pass to the [Object Storage](baremetal_object_storage.md) step of the wizard.
+
+|  |
+| --- |
+| NOTE |
+| Select this option only if the backup was saved to object storage directly. If the object storage is added as a Veeam backup repository or Veeam Cloud Connect repository, select the corresponding option instead.  To learn more about available object storage configurations, see [Backup to Object Storage](backup_to_object_storage.md). |
+
 * Shared folder — select this option if the backup file resides in a network shared folder. With this option selected, you will pass to the [Shared Folder](baremetal_share.md) step of the wizard.
 * Veeam backup repository — select this option if the backup file resides in a backup repository managed by a Veeam backup server. With this option selected, you will pass to the [Backup Server](baremetal_vbr.md) step of the wizard.
 

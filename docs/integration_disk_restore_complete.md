@@ -3,7 +3,7 @@ title: "Step 8. Complete Restore Process"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_disk_restore_complete.html"
-last_updated: "3/12/2026"
+last_updated: "3/25/2026"
 product_version: "13.0.2.1102"
 ---
 

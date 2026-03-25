@@ -3,8 +3,8 @@ title: "Step 4. Specify Remote Storage Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/files_restore_remote_conf.html"
-last_updated: "11/11/2025"
-product_version: "13.0.1.1009"
+last_updated: "3/25/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Step 4. Specify Remote Storage Settings
