@@ -3,7 +3,7 @@ title: "Before You Begin"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/integration_volume_restore_before.html"
-last_updated: "3/12/2026"
+last_updated: "3/25/2026"
 product_version: "13.0.2.1102"
 ---
 
