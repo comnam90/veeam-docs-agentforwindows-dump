@@ -3,7 +3,7 @@ title: "Ports"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html"
-last_updated: "3/12/2026"
+last_updated: "3/27/2026"
 product_version: "13.0.2.1102"
 ---
 
@@ -26,7 +26,7 @@ The following table describes network ports that must be opened to ensure proper
 Communication with Veeam Backup Server
 
 | From | To | Protocol | Port | Notes |
-| Veeam Agent computer | Veeam backup server | TCP | 10005 | Default port used by Veeam Agent for Microsoft Windows for communication with the Veeam backup server.  Port used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
+| Veeam Agent computer | Veeam backup server | TCP | 10005, | Port 10005 is the default port used by Veeam Agent for Microsoft Windows for communication with the Veeam backup server. Port 10005 is also used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Ports 49152 to 65535 are dymanic ports that are used for connections from Veeam Agent computer.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
 | TCP | 443 | Port used by Veeam Agent to obtain authentication tokens from the Veeam Backup Identity Service. |
 | Veeam backup server | Veeam Agent computer | TCP | 135, | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
 
@@ -96,7 +96,7 @@ The following table describes network ports that must be opened to ensure proper
 Communication with Other Services
 
 | From | To | Protocol | Port | Notes |
-| Veeam Agent computer | Active Directory Domain Controller | TCP | 135, 389, 636, 49152 to 65535 | Port 135 is used for connection with Microsoft Endpoint Mapper to find available network services. Ports 389, 636, 49152 to 65535 are used for communication over LDAP and LDAPS protocols. |
+| Veeam Agent computer | Active Directory Domain Controller | UDP | 135 | Port 135 is used for connection with Microsoft Endpoint Mapper to find available network services. |
 | Veeam Update Notification Server (agents.butler.veeam.com) | TCP | 443 | Default port used to download information about available updates from the Veeam Update Notification Server over the Internet. |
 
 Communication Between Veeam Agent Components
