@@ -3,8 +3,8 @@ title: "Short-Term Retention Policy"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/retention.html"
-last_updated: "10/29/2025"
-product_version: "13.0.1.1009"
+last_updated: "3/27/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Short-Term Retention Policy
