@@ -3,7 +3,7 @@ title: "Exporting Restore Point to Full Backup File"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/agent_export_backup.html"
-last_updated: "3/30/2026"
+last_updated: "4/2/2026"
 product_version: "13.0.2.1102"
 ---
 
