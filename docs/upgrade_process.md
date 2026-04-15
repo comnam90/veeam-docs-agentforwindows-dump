@@ -3,23 +3,23 @@ title: "Upgrading Veeam Agent for Microsoft Windows"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/upgrade_process.html"
-last_updated: "11/10/2025"
-product_version: "13.0.1.1009"
+last_updated: "4/15/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Upgrading Veeam Agent for Microsoft Windows
 
 
-For Veeam Agent for Microsoft Windows, upgrade to newer versions is supported. You can start the upgrade process from the Veeam Agent control panel when the new version becomes available. To learn how to check for product updates, see [Checking for New Product Versions and Updates](settings_updates.md).
+For Veeam Agent for Microsoft Windows, upgrade to newer versions is supported. You can start the upgrade process from the Veeam Agentcontrol panel when the new version becomes available. To learn how to check for product updates, see [Checking for New Product Versions and Updates](settings_updates.md).
 
 |  |
 | --- |
 | IMPORTANT |
-| Upgrade to version 13.0.1 is supported for Veeam Agent for Microsoft Windows version 6.3.1 and later.  If your computer is running an earlier version of Veeam Agent, you must first [upgrade to the latest available 6.3 version](https://helpcenter.veeam.com/archive/agentforwindows/60/userguide/upgrade_process.html). |
+| Upgrade to version 13.0.2 is supported for Veeam Agent for Microsoft Windows version 6.3.1 and later.  If your computer is running an earlier version of Veeam Agent, you must first [upgrade to the latest available 6.3 version](https://helpcenter.veeam.com/archive/agentforwindows/60/userguide/upgrade_process.html). |
 
 Before You Begin
 
-Before you upgrade Veeam Agent for Microsoft Windows to version 13.0.1, check the following prerequisites:
+Before you upgrade Veeam Agent for Microsoft Windows to version 13.0.2, check the following prerequisites:
 
 * Make sure that the Veeam Agent computer meets the [system requirements](system_requirements.md).
 * Make sure that there are no running jobs.
