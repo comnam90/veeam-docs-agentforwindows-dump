@@ -3,8 +3,8 @@ title: "Shared Folder Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/volume_restore_share.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "4/6/2026"
+product_version: "13.0.2.1102"
 ---
 
 # Shared Folder Settings
