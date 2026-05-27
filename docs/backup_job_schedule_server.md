@@ -3,8 +3,8 @@ title: "Scheduling Settings in Server Edition"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/backup_job_schedule_server.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "5/27/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Scheduling Settings in Server Edition

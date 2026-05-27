@@ -3,8 +3,8 @@ title: "Installation and Configuration"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/installation.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "5/27/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Installation and Configuration
