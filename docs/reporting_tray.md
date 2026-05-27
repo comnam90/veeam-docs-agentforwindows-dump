@@ -3,8 +3,8 @@ title: "Monitoring Backup State with Tray Agent"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/reporting_tray.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "5/27/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Monitoring Backup State with Tray Agent
@@ -14,8 +14,9 @@ The Veeam Agent for Microsoft Windows icon displayed in the system tray lets you
 
 The icon can be in one of the following states:
 
+Monitoring Backup State with Tray Agent
+
 | Icon | Description | Backup state |
-| --- | --- | --- |
 | ![Monitoring Backup State with Tray Agent](images/ep_icon_ellipsis.webp "Backup Job Is Not Configured") | Question mark over the icon | The backup job is not configured. |
 | ![Monitoring Backup State with Tray Agent](images/ep_icon_noschedule.webp "Backup Job Is Set Up but Not Scheduled") | Veeam Agent for Microsoft Windows icon | The backup job is set up but scheduling settings for the job are not configured. |
 | ![Monitoring Backup State with Tray Agent](images/ep_icon_progress.webp "Backup Task Is Being Performed") | Animated icon | The backup task is being performed. To view the backup task progress, hover the mouse over the icon. |
