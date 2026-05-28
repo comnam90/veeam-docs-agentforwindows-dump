@@ -3,8 +3,8 @@ title: "Step 6. Specify Backup Storage Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/backup_job_target_settings.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "5/27/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Step 6. Specify Backup Storage Settings

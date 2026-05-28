@@ -3,8 +3,8 @@ title: "Viewing Status of Restore Points in Backup Cache"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/monitoring_backup_cache.html"
-last_updated: "2/4/2025"
-product_version: "13.0.1.1009"
+last_updated: "5/27/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Viewing Status of Restore Points in Backup Cache
@@ -14,8 +14,9 @@ If the backup cache is enabled for the job, you can monitor status of restore po
 
 The icon can be in one of the following states:
 
+Viewing Status of Restore Points in Backup Cache
+
 | Icon | Description | Backup state |
-| --- | --- | --- |
 | ![Viewing Status of Restore Points in Backup Cache](images/cache_icon_check.webp "Backup File Is Saved on Target Storage") | Check mark over the icon. | The backup file created within the backup session is saved on the target storage. |
 | — | No icon. | The backup file created within the backup session is saved in the backup cache. |
 | ![Viewing Status of Restore Points in Backup Cache](images/cache_icon_sync.webp "Backup File Is Being Uploaded from Backup Cache to Target Storage") | Sync sign over the icon. | The backup file is being uploaded from the backup cache to the target storage. |
