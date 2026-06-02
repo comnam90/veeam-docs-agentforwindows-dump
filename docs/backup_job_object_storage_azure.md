@@ -3,8 +3,8 @@ title: "Microsoft Azure Blob Storage Settings"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/backup_job_object_storage_azure.html"
-last_updated: "2/24/2026"
-product_version: "13.0.1.1009"
+last_updated: "6/2/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Microsoft Azure Blob Storage Settings
@@ -12,8 +12,8 @@ product_version: "13.0.1.1009"
 
 If you have selected to store backup files in the Microsoft Azure Blob storage, specify the following settings:
 
-1. [Specify account settings](#vbr).
-2. [Specify container settings](#repo).
+1. [Specify account settings](backup_job_object_storage_azure.md#storage).
+2. [Specify container settings](backup_job_object_storage_azure.md#cont).
 
 Specifying Account Settings
 
@@ -77,7 +77,7 @@ To use the GFS (Grandfather-Father-Son) retention scheme, select the Keep certai
 
 * Select For the minimum immutability period only if you want to specify the immutability period explicitly and specify a minimum immutability period in days. By default, Veeam Agent sets the period to 30 days.
 
-In this case,  backup job retention settings are not considered in the calculation of the immutability period.
+In this case, backup job retention settings are not considered in the calculation of the immutability period.
 
 1. Click Advanced to specify advanced settings for the backup job. To learn more, see [Specify Advanced Backup Settings](backup_job_advanced.md).
 
@@ -103,7 +103,7 @@ You can map the job to the already created backup that is stored in the Microsof
 | NOTE |
 | You cannot select a folder that is managed by the Veeam Backup & Replication server. |
 
-1. Click Map backup and select the desired backup. To find the backup, you can use the search field at the bottom of the Select Backup window.
+1. Click Map backup and select the desired backup. To find the backup, you can use the search field at the bottom of the Select Backup window.
 
 Keep in mind that Veeam Agent displays only those backups that were created on the same Veeam Agent computer with the same account used to connect to the Microsoft Azure Blob storage.
 
