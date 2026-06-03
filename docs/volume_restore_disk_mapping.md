@@ -3,7 +3,7 @@ title: "Step 7. Map Restored Disks"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/volume_restore_disk_mapping.html"
-last_updated: "5/27/2026"
+last_updated: "6/2/2026"
 product_version: "13.0.3.1220"
 ---
 
