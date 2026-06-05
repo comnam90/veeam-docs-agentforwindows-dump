@@ -3,8 +3,8 @@ title: "Ports"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html"
-last_updated: "3/30/2026"
-product_version: "13.0.2.1102"
+last_updated: "6/4/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Ports
@@ -28,7 +28,7 @@ Communication with Veeam Backup Server
 | From | To | Protocol | Port | Notes |
 | Veeam Agent computer | Veeam backup server | TCP | 10005 | Port 10005 is the default port used by Veeam Agent for Microsoft Windows for communication with the Veeam backup server. Port 10005 is also used by Veeam Agent for direct connection to the Veeam backup server using a recovery token during bare metal restore.  Data between the Veeam Agent computer and backup repositories is transferred directly, bypassing Veeam backup servers. |
 | TCP | 443 | Port used by Veeam Agent to obtain authentication tokens from the Veeam Backup Identity Service. |
-| Veeam backup server | Veeam Agent computer | TCP | 135, | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
+| Veeam backup server | Veeam Agent computer | TCP | 135, 445, 6160,  6162, 2500 to 3300, 3260 | Ports used by Veeam Backup & Replication for file-level restore and disk publishing. |
 
 Communication with Veeam Backup Repositories
 
@@ -50,22 +50,6 @@ Communication with Veeam Cloud Connect Repositories
 | From | To | Protocol | Port | Notes |
 | Veeam Agent computer | Cloud gateway | TCP | 6180+ | Port on the cloud gateway used to transport Veeam Agent data to the Veeam Cloud Connect repository. |
 | Certificate revocation lists | TCP | 80 or 443 (most popular) | Veeam Agent computer needs access to CRLs (Certificate Revocation Lists) of the CA (Certification Authority) who issued a certificate to the Veeam Cloud Connect service provider.  Generally, information about CRL locations can be found on the CA website. |
-
-Communication with Object Storage
-
-The following table describes network ports that must be opened to ensure proper communication with object storage if you back up data to object storage directly or to object storage added as a Veeam backup repository with the direct connection mode. For more information about object storage connection modes, see [Connection Types](backup_to_object_storage.md#connect).
-
-Communication with Object Storage
-
-| From | To | Protocol | Port | Notes |
-| Veeam Agent computer | Amazon S3 object storage | TCP | 443 | Used to communicate with the Amazon S3 object storage through the following endpoints:   * \*.amazonaws.com (for both Global and Government regions) * \*.amazonaws.com.cn (for China region)   All AWS service endpoints are specified in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). |
-| 80 | Used to verify the certificate status through the following endpoints:   * \*.amazontrust.com * \*.cloudfront.net   Consider that certificate verification endpoints (CRL URLs and OCSP servers) are subject to change. The actual list of addresses can be found in the certificate itself. |
-| Microsoft Azure object storage | TCP | 443 | Used to communicate with the Microsoft Azure object storage through the following endpoints:   * <storage-account>.blob.core.windows.net (for Global region) * <storage-account>.blob.core.chinacloudapi.cn (for China region) * <storage-account>.blob.core.usgovcloudapi.net (for Government region)   Consider that the <storage-account> part of the address must be replaced with your actual storage account URL that can be found in the Azure management portal. |
-| 80 | Used to verify the certificate status through the following endpoints:   * ocsp.digicert.com * oneocsp.microsoft.com   Consider that certificate verification endpoints (CRL URLs and OCSP servers) are subject to change. The actual list of addresses can be found in the certificate itself. For more details, see also [Microsoft documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-CA-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists). |
-| Google Cloud storage | TCP | 443 | Used to communicate with Google Cloud storage through the following endpoints:   * storage.googleapis.com   All cloud endpoints are specified in [this Google article](https://cloud.google.com/storage/docs/request-endpoints). |
-| 80 | Used to verify the certificate status through the following endpoints:   * ocsp.pki.goog * pki.goog * crl.pki.goog   Consider that certificate verification endpoints (CRL URLs and OCSP servers) are subject to change. The actual list of addresses can be found in the certificate itself. |
-| IBM Cloud object storage | TCP | Depends on device configuration | Used to communicate with IBM Cloud object storage. |
-| S3 compatible object storage | TCP | Depends on device configuration | Used to communicate with S3 compatible object storage. |
 
 Communication with Shared Folder Targets
 
@@ -111,6 +95,6 @@ The following table describes network ports that are required for communication 
 Communication Between Veeam Agent Components
 
 | Protocol | Port | Notes |
-| TCP | 6183, 2500 to 3500, 49152 to 65535 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
+| TCP | 6183, 2500 to 3500 | Ports used locally on the Veeam Agent computer for communication between Veeam Agent components and Veeam Agent for Microsoft Windows Service. |
 
 
