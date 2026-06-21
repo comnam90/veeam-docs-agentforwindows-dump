@@ -3,7 +3,7 @@ title: "Disabling Backup over VPN Connections"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/settings_network_vpn.html"
-last_updated: "6/4/2026"
+last_updated: "6/19/2026"
 product_version: "13.0.3.1220"
 ---
 
