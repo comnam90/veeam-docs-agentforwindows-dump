@@ -3,7 +3,7 @@ title: "Viewing Status of Restore Points in Backup Cache"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/monitoring_backup_cache.html"
-last_updated: "6/4/2026"
+last_updated: "6/19/2026"
 product_version: "13.0.3.1220"
 ---
 

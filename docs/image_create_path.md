@@ -3,7 +3,7 @@ title: "Step 3. Specify Path to ISO"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/image_create_path.html"
-last_updated: "6/4/2026"
+last_updated: "6/19/2026"
 product_version: "13.0.3.1220"
 ---
 
