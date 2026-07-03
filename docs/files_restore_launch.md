@@ -3,8 +3,8 @@ title: "Step 1. Launch File Level Restore Wizard"
 product: "agentforwindows"
 doc_type: "userguide"
 source_url: "https://helpcenter.veeam.com/docs/agentforwindows/userguide/files_restore_launch.html"
-last_updated: "11/19/2025"
-product_version: "13.0.1.1009"
+last_updated: "6/19/2026"
+product_version: "13.0.3.1220"
 ---
 
 # Step 1. Launch File Level Restore Wizard
@@ -19,5 +19,7 @@ To launch the File Level Restore wizard, do either of the following:
 * Double-click the Veeam Agent for Microsoft Windows icon in the system tray or right-click the icon and select Control Panel. In the main menu, hover over the name of the job that that created the backup from which you want to restore data, and select Restore file.
 
 * From the Microsoft Windows Start menu, select All Programs > Veeam > File Level Restore.
+
+![Step 1. Launch File Level Restore Wizard](images/flr_launch.webp "Select Restore Point")
 
 
